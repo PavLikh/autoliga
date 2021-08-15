@@ -1,0 +1,140 @@
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+		var myMap;
+		function initMap_1 ()
+  		{
+  			myMap = new ymaps.Map("yandexmap_1", {
+    			center: [55.76, 37.64],
+    			zoom: 10,
+    			controls: ['searchControl'] //добавляет поисковик адресов
+    		},{
+		    	// Будет производиться поиск по топонимам и организациям.
+    			searchControlProvider: 'yandex#search'
+			});
+
+			//searchControl.search('Дворцовая площадь, 2');
+
+		//	var myGeoObject = new ymaps.GeoObject({
+    	//		geometry: {
+        //		type: "Point", // тип геометрии - точка
+        //		coordinates: [55.8, 37.8] // координаты точки
+    	//		}
+		//	});
+
+			// Размещение геообъекта на карте.
+		//	myMap.geoObjects.add(myGeoObject); 
+
+			// Создадим метку.
+			var placemark1 = new ymaps.Placemark([55.75, 37.61], {
+    			balloonContent: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" />',
+   				iconContent: "Азербайджан"}
+				, {
+    			preset: "islands#yellowStretchyIcon",
+    			// Отключаем кнопку закрытия балуна.
+    			balloonCloseButton: false,
+    			 // Балун будем открывать и закрывать кликом по иконке метки.
+    			hideIconOnBalloonOpen: false
+			});
+			var placemark2 = new ymaps.Placemark([55.75, 37.0], {
+    			balloonContent: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" />',
+   				iconContent: "Москва"}
+				, {
+    			preset: "islands#yellowStretchyIcon",
+    			// Отключаем кнопку закрытия балуна.
+    			//balloonCloseButton: false,
+    			 // Балун будем открывать и закрывать кликом по иконке метки.
+    			//hideIconOnBalloonOpen: false
+			});
+			//myMap.geoObjects.add(placemark1);
+			//myMap.geoObjects.add(placemark2);
+
+
+    		//marker = new ymaps.Placemark([56.039017, 92.894853], {
+    		//	hintContent: 'Расположение',
+    		//	balloonContent: 'Это наша организация'
+    		//});
+  			//myMap.geoObjects.add(marker);
+  			// Сделаем у карты автомасштаб чтобы были видны все метки.
+			//myMap.setBounds(myCollection.getBounds(),{checkZoomRange:true, zoomMargin:9});
+  		}
+
+  		function initMap_array_in_js ()
+  		{
+  			var pointer = [];
+  			<?php
+  				foreach ($arStores as $key => $item) { ?>
+  					pointer.push([<?=$item['coordinates'] ?>]);
+  			<?php	}
+			?>
+
+  			var place;
+  			//var pointer = [[55.650277, 37.620941],[55.788616, 37.253180]];
+  			console.log(pointer);
+  			//var pointer = <?=$coordinates ?>;
+
+  			myMap = new ymaps.Map("yandexmap", {
+    			center: [55.76, 37.64],
+    			zoom: 7,
+    		});
+
+    		for (var i = 0; i < pointer.length; i++) {
+    			myGeoObject = new ymaps.Placemark(pointer[i], {
+    				//balloonContent: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" /></br><a href="#">Ссылка</a>',
+    				balloonContentBody: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" />',
+    				balloonContentFooter: '<a href="#">Ссылка</a>',
+    				
+    				hintContent: "Подсказка",
+   					iconContent: "Азербайджан"}
+					, {
+    				preset: "islands#greenStretchyIcon",
+    				// Отключаем кнопку закрытия балуна.
+    				//balloonCloseButton: false,
+    			 	// Балун будем открывать и закрывать кликом по иконке метки.
+    				hideIconOnBalloonOpen: false
+    			});
+    		//	myMap.geoObjects.add(myGeoObject);
+    		}
+  		}
+
+  		function initMap ()
+  		{
+
+  			myMap = new ymaps.Map("yandexmap", {
+    			center: [55.76, 37.64],
+    			zoom: 7,
+    		});
+  			//var pointer = [];
+  			<?php
+  				foreach ($arStores as $key => $item) { ?>
+  					//pointer = [<?=$item['coordinates'] ?>];
+
+
+
+
+  					myGeoObject = new ymaps.Placemark([<?=$item['coordinates'] ?>],
+  						{
+    						balloonContentBody: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" />',
+    						balloonContentFooter: '<a href="#">Ссылка</a>',
+    				
+    						hintContent: "<?=$item['address_ru']?>",
+   							//iconContent: "Азербайджан"
+   						}, 
+   						{
+    						preset: "islands#greenStretchyIcon",
+    						// Отключаем кнопку закрытия балуна.
+    						//balloonCloseButton: false,
+    			 			// Балун будем открывать и закрывать кликом по иконке метки.
+    						hideIconOnBalloonOpen: false
+    			});
+
+  		//		myMap.geoObjects.add(myGeoObject);
+
+  			<?php } ?>
+
+  		//	var place;
+
+			
+    		
+  		}
+	//	ymaps.ready(initMap);
+	</script>

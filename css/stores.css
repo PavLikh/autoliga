@@ -1,0 +1,36 @@
+.stores {
+
+	margin: auto;
+}
+
+.stores_list {
+	display: inline-block;
+	/*width: 690px;*/
+	width: 49.5%;
+	/*height: 500px;*/
+	background-color: green;
+	float: left;
+	
+}
+
+.stores_list a:hover {
+	background-color: blue;
+}
+
+.store_item {
+	background-color: MediumSeaGreen;
+	margin-bottom: 5px;
+
+}
+
+.stores_list .store_item:hover {
+	background-color: blue;
+}
+
+.stores .map {
+	display: inline-block;
+	/*width: 500px;*/
+	width: 49.5%;
+	/*float: right;*/
+}
+

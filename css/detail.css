@@ -1,0 +1,110 @@
+.product_detail {
+	width: 100%;
+	
+}
+
+/* Фото авто */
+
+.product-photo {
+	/*width: 800px; с тремя уменьшенными фото справа*/
+	width: 600px;
+	height: 450px;
+	background-color: sienna;
+	overflow: hidden;
+}
+
+.main_photo {
+	display: block;
+	height: 100%;
+	/*width: 75%; с тремя уменьшенными фото справа*/
+	background-color: black;
+	margin-top: 0px;
+	margin-right: auto; 
+
+	justify-content: center;
+	align-items: center;	
+}
+
+.main_photo img {
+	max-height: 100%;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.thumbnail_list {
+	display: block;
+	background-color: sienna;
+	width: 24.8%;
+	height: 100%;
+	margin-left: auto;
+	margin-top: -450px;
+	margin-right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.thumbnail_item{
+	width: 100%;
+	height: 33%;
+
+	/*margin: 0;*/
+}
+
+.thumbnail_item img {
+	height: 100%;
+
+}
+
+/* -END- Фото авто */
+
+.discount .special_price {
+	margin-top: 5px;
+	display: block;
+	height: 32px;
+	width: 590px;
+	font-size: 1.4em;
+	border: 4px solid LightCoral;
+	background-color: LightCoral;
+	border-radius: 16px;
+	text-align: center;
+}
+
+.discount .gift {
+	margin-top: 5px;
+	display: block;
+	height: 32px;
+	width: 590px;
+	font-size: 1.4em;
+	border: 4px solid MediumSpringGreen;
+	background-color: MediumSpringGreen;
+	border-radius: 16px;
+	text-align: center;
+}
+
+
+button.edit {
+	background: darkgreen;
+	color: white;
+}
+
+.del {
+	background: Crimson;
+	color: white;
+}
+
+.button:hover.edit {
+	background: #007d34;
+}
+
+.button:hover.del {
+	background: #e63244;
+}
+
+.disable {
+	background: darkgrey;
+	pointer-events: none;
+	color: linen;
+	box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.7);
+}
+

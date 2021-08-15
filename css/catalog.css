@@ -1,0 +1,54 @@
+.filter {
+	display: flex;
+	background-color: slategrey;
+}
+
+form {
+	display: inline-flex;
+	width: 250px;
+	background-color: blue;
+	flex-flow: wrap;
+}
+
+input[type="submit"] {
+	height: 25px;
+	align-self: flex-end;
+
+}
+/* END filter */
+
+/* catalog */
+#catalog {
+	width: 100%;
+	background-color: wheat;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product_item {
+	width: 25%;
+	min-width: 200px;
+	background-color: rosybrown;
+	display: flex;
+	align-content: stretch;
+	flex-flow: column nowrap;
+
+}
+
+.product_item img {
+	width: 100%;
+}
+
+.product_item figcaption {
+	flex-grow: 3;
+}
+
+.none {
+	display: none;
+}
+
+.edit {
+	align-self: center;
+	vertical-align: bottom;
+	/*background-color: yellow;*/
+}
