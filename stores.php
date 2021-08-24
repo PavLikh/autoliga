@@ -1,18 +1,9 @@
 <?php
 
-//require_once 'app/provider.php';
-
 include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
 
 $arStores = $store->arStores();
 $arNavChain = $menu->getNavChain($_SERVER['REQUEST_URI']);
-
-echo '<pre>';
-//print_r($_SERVER);
-//print_r($_SERVER['REQUEST_URI']);
-//print_r($arMainMenu);
-//print_r($arNavChain);
-echo '</pre>';
 
 ?>
 
@@ -27,23 +18,19 @@ echo '</pre>';
     			center: [57.799, 37.114],
     			zoom: 5.2,
     		});
-  			//var pointer = [];
   			<?php
   				foreach ($arStores as $key => $item) { ?>
-  					//pointer = [<?=$item['coordinates'] ?>];
+
   					myGeoObject = new ymaps.Placemark([<?=$item['coordinates'] ?>],
   						{
     						balloonContentBody: '<img src="http://img-fotki.yandex.ru/get/6114/82599242.2d6/0_88b97_ec425cf5_M" />',
     						balloonContentFooter: '<a href="#">Ссылка</a>',
     				
     						hintContent: "<?=$item['address_ru']?>",
-   							//iconContent: "Азербайджан"
+
    						}, 
    						{
     						preset: "islands#greenStretchyIcon",
-    						// Отключаем кнопку закрытия балуна.
-    						//balloonCloseButton: false,
-    			 			// Балун будем открывать и закрывать кликом по иконке метки.
     						hideIconOnBalloonOpen: false
     			});
 

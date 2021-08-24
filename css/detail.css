@@ -6,7 +6,6 @@
 /* Фото авто */
 
 .product-photo {
-	/*width: 800px; с тремя уменьшенными фото справа*/
 	width: 600px;
 	height: 450px;
 	background-color: sienna;
@@ -16,7 +15,6 @@
 .main_photo {
 	display: block;
 	height: 100%;
-	/*width: 75%; с тремя уменьшенными фото справа*/
 	background-color: black;
 	margin-top: 0px;
 	margin-right: auto; 
@@ -47,8 +45,6 @@
 .thumbnail_item{
 	width: 100%;
 	height: 33%;
-
-	/*margin: 0;*/
 }
 
 .thumbnail_item img {

@@ -5,9 +5,7 @@
 
 .stores_list {
 	display: inline-block;
-	/*width: 690px;*/
 	width: 49.5%;
-	/*height: 500px;*/
 	background-color: green;
 	float: left;
 	
@@ -29,8 +27,6 @@
 
 .stores .map {
 	display: inline-block;
-	/*width: 500px;*/
 	width: 49.5%;
-	/*float: right;*/
 }
 

@@ -20,20 +20,6 @@ trait sortData {
 		return $array;
 	}
 
-
-	# getArrayByUniqueValuesFlag
-	# сортировка массива по уникальным значениям с учетом ключа по полю $key
-
-	// function getArrayByUniqueValuesKey ($arrayFromDB, $keyColumnName, $gruopColumnName, $key):array {
-	// 	$array = [];
-	// 	foreach ($arrayFromDB as $subArr) {
-	// 		$array[$subArr[$keyColumnName]][$subArr[$key]] = $subArr[$gruopColumnName];
-	// 	}
-
-	// 	return $array;
-	// }
-
-
 	# getArrayByUniqueValuesKey
 	# сортировка массива по уникальным значениям с учетом ключа по полю $key
 
@@ -45,21 +31,12 @@ trait sortData {
 			$array[$subArr[$keyColumnName]][$subArr[$key]] = $subArr[$gruopColumnName];
 		}
 
-echo '<pre>';
-// print_r($arrayFromDB);
-// print_r($array);
-echo '</pre>';
-
 		return $array;
 	}
 
 	function delNumericKey ($array):array
 	{
-		// foreach ($array as $key => $value) {
-		// 	if (isnumeric($key)) {
 
-		// 	}
-		// }
 		for ($i = 0; $i < count($array); $i++) {
 			echo $array[$i];
 			if (isnumeric($array[$i])) {

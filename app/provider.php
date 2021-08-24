@@ -13,16 +13,8 @@ class Menu extends App\QueryBuilder
 		
 		// 2. Prepare the statement
 		$statement = $this->pdo->prepare("SELECT purpose.id, purpose.title_ru, feature.sort_flag AS 'flag', feature.name_ru, feature.id AS 'feat_id' FROM purpose LEFT JOIN `feature` ON purpose.id = feature.purpose_id ORDER BY feature.sort_flag");
-		// $statement = $this->pdo->prepare("SELECT * FROM $table LEFT JOIN `feature` ON purpose.id = feature.purpose_id");
 		$statement->execute(); //выполнить
-		//$result = array_reverse($statement->fetchAll(PDO::FETCH_ASSOC));//die; // получаем массив fetchAll() ["id"]=>"16", [0]=> "16" .../ fetchAll(2) ["id"]=>"16" .../  то же что константа PDO::FETCH_ASSOC = 2
-		//$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 		$result = $statement->fetchAll(PDO::FETCH_NAMED);
-
-// echo '<pre>';
-// print_r($result);
-// echo '</pre>';
-
 
 		$arrMainMenu = $this->getArrayByUniqueValuesKey($result, 'title_ru', 'name_ru', 'feat_id');
 
@@ -49,20 +41,15 @@ class Menu extends App\QueryBuilder
 						if (array_key_exists($currentFeatureId, $feature)) {
 							$arNavChain[0] = $key;
 							$arNavChain[1] = $feature[$currentFeatureId];
-						//break;
+						
 						}
-				//var_dump(array_keys($feature,$currentFeatureId));
 					}
 				}
 
 			}
 			
 		}
-		echo '<pre>';
-		//print_r($arNavChain);
-		//print_r($currentFearureId);
-		//print_r($arMainMenu);
-		echo '</pre>';
+
 		return $arNavChain;
 	}
 
@@ -158,13 +145,6 @@ class Catalog extends App\QueryBuilder
 		$statement->execute(); //выполнить
 		$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 		
-echo '<pre>';
-//print_r($result);
-echo '</pre>';
-
-
-
-
 		return $result;
 	}
 
@@ -229,13 +209,6 @@ class Filter
 			$result[$value['mark_id']] = $value['mark'];
 		}
 
-// echo '<pre>';
-// echo 'class Filter:'.'<br>';
-// //print_r($arCatalog);
-// //print_r($result);
-// echo '</pre>';
-
-
 		return $result;
 	}
 
@@ -245,16 +218,9 @@ class Filter
 		foreach ($arCatalog as $key => $value) {
 			$arMark[$value['mark_id']] = $value['mark'];
 			$arModel[$value['model_id']] = $value['model'];
-			//$result[$value['mark']] = $arModel;
 		}
+		
 		$result = ['mark' => $arMark, 'model' => $arModel];
-
-echo '<pre>';
-// echo 'class Filter:'.'<br>';
-// //print_r($arCatalog);
-//print_r($result);
-echo '</pre>';
-
 
 		return $result;
 	}
@@ -274,13 +240,6 @@ echo '</pre>';
 	public function catalogByMark ($arMarkId, $arCatalog)
 	{
 		
-// echo '<pre>';
-// echo 'function catalogByMark';
-// print_r($arMarkId);
-// //print_r($arCatalog);
-
-// echo '</pre>';
-
 		foreach ($arCatalog as $key => $arVehicle) {
 			foreach ($arMarkId as  $value) {
 				if ($arVehicle['mark_id'] == $value) {
@@ -289,27 +248,13 @@ echo '</pre>';
 			}
 		}
 
-
-// echo '<pre>';
-// echo 'function catalogByMark->$arFilteredCatalog';
-// //print_r($arFilteredCatalog);
-// echo '</pre>';
-
 		return $arFilteredCatalog;
 	}
 
 
-//пока не вызывается
 	public function catalogByModel ($arModelId, $arCatalog)
 	{
 	
-// echo '<pre>';
-// echo 'function catalogByMark';
- // print_r($arModelId);
-// //print_r($arCatalog);
-
-// echo '</pre>';
-
 		foreach ($arCatalog as $key => $arVehicle) {
 			foreach ($arModelId as $value) {
 				if ($arVehicle['model_id'] == $value) {
@@ -317,12 +262,6 @@ echo '</pre>';
 				}
 			}
 		}
-
-
-// echo '<pre>';
-// echo 'function catalogByMark->$arFilteredCatalog';
-// //print_r($arFilteredCatalog);
-// echo '</pre>';
 
 		return $arFilteredCatalog;
 	}
@@ -363,13 +302,7 @@ class Detail extends App\QueryBuilder
 		
 
 		$statement = $this->pdo->prepare($this->sql . " WHERE vehicle.id = $vehicleId");
-
-
-
-
-//		$statement = $this->pdo->prepare($this->sql . " WHERE vehicle.id = $vehicleId");
-		$statement->execute(); //выполнить
-		//$result = $statement->fetchAll(PDO::FETCH_ASSOC);//FETCH_NAMED - одинаковые имена без аоиасов
+		$statement->execute();
 		$result = $statement->fetch(PDO::FETCH_ASSOC);
 
 		return $result;
