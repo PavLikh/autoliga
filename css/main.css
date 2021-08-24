@@ -118,7 +118,7 @@ nav .exit {
 }
 
 .main_menu {
-	text-align: center; /*выравнивает текст внутри каждого контейнеера*/
+	/*text-align: center;*/ /*выравнивает текст внутри каждого контейнеера*/
 	height: 30px;
 	outline: 2px red solid;
 
@@ -208,6 +208,7 @@ nav .exit {
 
 .banner h1{
 	color: green;
+	color: LightCyan;
 	font-size: 3.428em;
 	font-weight: normal;
 	line-height: 1.27em;
@@ -217,6 +218,7 @@ nav .exit {
 }
 .banner h2{
 	color: green;
+	color: LightCyan;
 	font-size: 1.286em;
 	font-weight: normal;
 	width: 75%;
@@ -228,12 +230,13 @@ nav .exit {
 
 .detail_link {
 	text-decoration: none;
-	position: relative;	
+	position: relative;
+	color: #ff7519;
 }
 
 
 .detail_link:hover {
-	color: #ff7519;
+	color: #ff9f5f;
 }
 
 
