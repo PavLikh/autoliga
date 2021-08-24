@@ -3,21 +3,13 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
 $arCatalog = $catalog->productLine();
 
-echo '<pre>';
-//print_r($arCatalog);
-echo '</pre>';
-
-
 ?>
 
-<?php
-
-?>
 
 		<section class="tagline">
 			<div id="top">
         		<h1>Режим просмотра</h1>
-        		<!-- <h3>это образ жизни!</h3> -->
+
     		</div>
 		</section>
 		<section class="content">
@@ -46,17 +38,15 @@ echo '</pre>';
                   				<div class="product_item_label gift"></div>
                 			<?php endif ?>
                 			<div class="product_item_pict">
-                  <!-- <a href="detail.php?vehicle=<?=$item['id'] ?>"> -->
-                    <!-- <img src="images/<?=$photoName?>.jpg" alt="<?=$item['mark']. ' ' .$item['model']?>" title="<?=$item['mark']. ' ' .$item['model']?>"/> -->
+
                     <img src="images/<?=$detail->picture($item)?>.jpg" alt="<?=$item['mark']. ' ' .$item['model']?>" title="<?=$item['mark']. ' ' .$item['model']?>"/>
-                  <!-- </a> -->
                 			</div>
                 		</a>
                 		<figcaption>
                   			<h3><a href="detail.php?vehicle=<?=$item['id'] ?>"><?=$item['mark'] . ' ' . $item['model'] ?></a></h3>
                  			<span class="product_item_price old_price"><?=($item['discount_id'] == 2) ? number_format($item['price'], 0, '.', ' ') : ''?></span>
                 			<p class="product_item_price"><?=number_format(($item['discount_id'] == 2) ? $item['price'] * 0.7 : $item['price'], 0, '.', ' ') ?></p>
-                  <!-- <a class="buy_button inverse inline-block pie" href="#buy_popup" rel="modal:open">В корзину</a> -->
+
                 		</figcaption>
             		</figure>
               <?php endforeach ?>

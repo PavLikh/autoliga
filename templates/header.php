@@ -1,14 +1,10 @@
 <?php
 session_start();
 
-print_r($_SESSION);
-
 require_once 'app/QueryBuilder.php';
 require_once 'app/servises.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/provider.php';
 $arMainMenu = $menu->main_menu();
-//$arNavChain =$menu->getNavChain($arMainMenu);
-
 
 ?>
 <!DOCTYPE html>
@@ -33,14 +29,8 @@ $arMainMenu = $menu->main_menu();
 						<a href="/"><span>Autoliga</span></a>
 					</div>
 
-					<a class="user_type <?=!$_SESSION['user'] ? 'active' : '' ?>" href="auth.php?source=<?=namePage($_SERVER['PHP_SELF'])?>">Посетитель</a>
-					<a class="user_type <?=$_SESSION['user'] == 'content' ? 'active' : '' ?>" href="auth.php?user=content&source=<?=namePage($_SERVER['PHP_SELF'])?>">Контент менеджер</a>
-
 					<div class="register_block">
-						<a href="" class="auth">Войти</a>	
-						<a href="" class="register">Зарегистрироваться</a>
-						<div class="user_name">User_name</div>
-						<a href="" class="exit">Выйти</a>	
+
 					</div>
 				</div>
 
@@ -78,15 +68,7 @@ $arMainMenu = $menu->main_menu();
 							</li>
 							<?php endif ?>
 						<?php endforeach ?>
-						<li class="submenu">
-							<a href="#">Внедорожники</a>
-							<div class="submenu_border"></div>
-							<ul>
-								<li><a href="">Рамные</a></li>
-								<li><a href="">Пикапы</a></li>
-							</ul>
-						</li>
-						<li><a href="catalog.php">КАТАЛОГ</a></li>
+
 						<li><a href="promotion.php">Покупателям</a></li>
 					</ul>
 				</div>
