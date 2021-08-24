@@ -1,7 +1,5 @@
 <?php
 
-//require_once 'app/provider.php';
-
 include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
 
 $vehicleId = 0;
@@ -19,13 +17,6 @@ if ($_GET['vehicle']) {
 	$photoName = $detail->picture($arDetail);
 
 }
-
-echo '<pre>';
-//print_r($_GET);
-//print_r($arDetail);
-print_r($_POST);
-echo $photoName;
-echo '</pre>';
 
 ?>
 <script>
@@ -47,17 +38,7 @@ echo '</pre>';
 					<div class="main_photo">
 						<img class="" src="images/<?=$photoName?>.jpg">
 					</div>
-<!-- 					<div class="thumbnail_list">
-						<div class="thumbnail_item">
-							<img class="" src="images/<?=$photoId?>_mercedes_c_01.jpg">
-						</div>
-						<div class="thumbnail_item">
-							<img class="" src="images/mercedes_c_02.jpg" alt="BMW Z4 sDrive 35i 2">
-						</div>
-						<div class="thumbnail_item">
-							<img class="" src="images/mercedes_c_03.jpg" alt="BMW Z4 sDrive 35i 3">
-						</div>
-					</div> -->
+
 				</div>
 				<div class="discount">
 
@@ -101,26 +82,8 @@ echo '</pre>';
 								<td><div><span>Кузов:</span></div></td>
 								<td><?=$arDetail['body']?></td>
 							</tr>
-							<tr>
 								<td><div><span>Салон:</span></div></td>
-								<td><button onClick="javascript:window.location.href='store.php?storeId=2';"><?=$arDetail['store'] ?></button></td>
-							</tr>
-							<td><div><span>Салон:</span></div></td>
-								<td><a href='store.php?storeId=<?=$arDetail['store_id'] ?>';"><b><?=$arDetail['store'] ?></b></a></td>
-							</tr>
-							<tr>
-								<!-- <td><button class="button <?=$arDetail['editable'] == 1 ? 'edit' : 'disable'?>" onClick="javascript:window.location.href='';">Изменить</button></td> -->
-								<td><button class="button <?=$arDetail['editable'] == 1 ? 'edit' : 'disable'?>" id="button">Изменить JS</button></td>
-								<td><button class="button <?=$arDetail['editable'] == 1 ? 'del' : 'disable'?>" onClick="javascript:window.location.href='';">Удалить</button></td>
-								<td><button class="" id="button">Кнопка</button><p class="out"></p></td>
-
-
-								<td><?=$vehicleId?><button class="test change_city">Send AJAX-request</button></td>
-
-								<script>
-
-								</script>
-
+								<td><a href='store.php?storeId=<?=$arDetail['store_id'] ?>'><b><?=$arDetail['store'] ?></b></a></td>
 							</tr>
 
 						</table>
