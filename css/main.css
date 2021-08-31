@@ -75,7 +75,10 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 }
 
 .register_block {
@@ -85,7 +88,10 @@ nav {
 
 a.user_type {
 	text-transform: uppercase;
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
 	border-radius: 10px;
 	padding: 3px 10px;
 	font-size: 1.2em;
@@ -114,7 +120,11 @@ nav .exit {
 }
 
 .main_menu {
+<<<<<<< HEAD
 	text-align: center;
+=======
+	text-align: center; /*выравнивает текст внутри каждого контейнеера*/
+>>>>>>> dev
 	height: 30px;
 	outline: 2px red solid;
 
@@ -170,12 +180,38 @@ nav .exit {
 
 /**/
 
-.tagline {
+.devPanel {
 
-	text-align: center;
+	/*text-align: center;*/
 	background-color: grey;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 }
 
+.devPanel h1 {
+	/*display: inline-block;*/
+	display: block;
+}
+
+.devPanel div {
+	/*display: inline-block;*/
+}
+
+.devPanel a {
+	/*margin-left: 200px;*/
+	outline: 1px solid black;
+}
+
+.devPanel a:hover, .devPanel .active {
+	color: #ff7519;
+	outline: 1px solid #ff7519;
+}
+
+.devInfo img {
+	width: 100%;
+}
 
 /* content */
 
@@ -228,6 +264,9 @@ nav .exit {
 	color: #ff9f5f;
 }
 
+.detail_link:visited {
+	color: #ff7519;
+}
 
 /* END advert / рекламной баннер */
 

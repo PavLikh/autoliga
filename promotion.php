@@ -2,6 +2,7 @@
 
 include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
 
+<<<<<<< HEAD
 $vehicleId = 0;
 if ($_GET['vehicle']) {
 	$vehicleId = $_GET['vehicle'];
@@ -12,6 +13,8 @@ if ($_GET['vehicle']) {
 
 }
 
+=======
+>>>>>>> dev
 ?>
 
 		
@@ -24,7 +27,11 @@ if ($_GET['vehicle']) {
 <section class="content">
 
 		<h2>...Страница в разработке...</h2>
+<<<<<<< HEAD
 	
+=======
+			
+>>>>>>> dev
 </section>
 <?php
 

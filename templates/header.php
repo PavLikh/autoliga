@@ -75,3 +75,9 @@ $arMainMenu = $menu->main_menu();
 				
 			</nav>
 		</header>
+
+<section class="devPanel">
+	<div>DevPanel</div>
+  	<h1>Режим просмотра</h1>
+   	<a href="structure.php" class="<?=$_SERVER['REQUEST_URI'] == '/structure.php' ? 'active' : ''?>">Структура БД</a>
+</section>

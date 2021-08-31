@@ -6,12 +6,15 @@ $arCatalog = $catalog->productLine();
 ?>
 
 
+<<<<<<< HEAD
 		<section class="tagline">
 			<div id="top">
         		<h1>Режим просмотра</h1>
 
     		</div>
 		</section>
+=======
+>>>>>>> dev
 		<section class="content">
 			<div class="advert">
 				<div class="banner">
