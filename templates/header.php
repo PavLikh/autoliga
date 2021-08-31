@@ -33,14 +33,8 @@ $arMainMenu = $menu->main_menu();
 						<a href="/"><span>Autoliga</span></a>
 					</div>
 
-					<a class="user_type <?=!$_SESSION['user'] ? 'active' : '' ?>" href="auth.php?source=<?=namePage($_SERVER['PHP_SELF'])?>">Посетитель</a>
-					<a class="user_type <?=$_SESSION['user'] == 'content' ? 'active' : '' ?>" href="auth.php?user=content&source=<?=namePage($_SERVER['PHP_SELF'])?>">Контент менеджер</a>
-
 					<div class="register_block">
-						<a href="" class="auth">Войти</a>	
-						<a href="" class="register">Зарегистрироваться</a>
-						<div class="user_name">User_name</div>
-						<a href="" class="exit">Выйти</a>	
+
 					</div>
 				</div>
 
@@ -78,18 +72,16 @@ $arMainMenu = $menu->main_menu();
 							</li>
 							<?php endif ?>
 						<?php endforeach ?>
-						<li class="submenu">
-							<a href="#">Внедорожники</a>
-							<div class="submenu_border"></div>
-							<ul>
-								<li><a href="">Рамные</a></li>
-								<li><a href="">Пикапы</a></li>
-							</ul>
-						</li>
-						<li><a href="catalog.php">КАТАЛОГ</a></li>
+
 						<li><a href="promotion.php">Покупателям</a></li>
 					</ul>
 				</div>
 				
 			</nav>
 		</header>
+
+<section class="devPanel">
+	<div>DevPanel</div>
+  	<h1>Режим просмотра</h1>
+   	<a href="structure.php" class="<?=$_SERVER['REQUEST_URI'] == '/structure.php' ? 'active' : ''?>">Структура БД</a>
+</section>
