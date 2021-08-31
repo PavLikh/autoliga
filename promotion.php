@@ -13,7 +13,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
 </nav>
 <section class="content">
 
-	
+		<h2>...Страница в разработке...</h2>
+			
 </section>
 <?php
 
