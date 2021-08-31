@@ -75,6 +75,10 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev
 }
 
 .register_block {
@@ -84,6 +88,10 @@ nav {
 
 a.user_type {
 	text-transform: uppercase;
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev
 	border-radius: 10px;
 	padding: 3px 10px;
 	font-size: 1.2em;
@@ -112,7 +120,11 @@ nav .exit {
 }
 
 .main_menu {
+<<<<<<< HEAD
 	text-align: center;
+=======
+	text-align: center; /*выравнивает текст внутри каждого контейнеера*/
+>>>>>>> dev
 	height: 30px;
 	outline: 2px red solid;
 
@@ -169,6 +181,8 @@ nav .exit {
 /**/
 
 .devPanel {
+
+	/*text-align: center;*/
 	background-color: grey;
 	display: flex;
 	flex-direction: row;
@@ -177,14 +191,16 @@ nav .exit {
 }
 
 .devPanel h1 {
+	/*display: inline-block;*/
 	display: block;
 }
 
 .devPanel div {
-
+	/*display: inline-block;*/
 }
 
 .devPanel a {
+	/*margin-left: 200px;*/
 	outline: 1px solid black;
 }
 
@@ -263,9 +279,11 @@ nav .exit {
 	justify-content: space-between;
 }
 
+/*.product_line .product_item*/
 .product_item
 {
 	width: 24.5%;
+	/*background-color: rosybrown;*/
 	position: relative;
 }
 

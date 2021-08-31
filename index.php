@@ -5,16 +5,6 @@ $arCatalog = $catalog->productLine();
 
 ?>
 
-
-<<<<<<< HEAD
-		<section class="tagline">
-			<div id="top">
-        		<h1>Режим просмотра</h1>
-
-    		</div>
-		</section>
-=======
->>>>>>> dev
 		<section class="content">
 			<div class="advert">
 				<div class="banner">
@@ -22,7 +12,7 @@ $arCatalog = $catalog->productLine();
 					<div class="banner_content">
 						<h1>Новый Mercedes C-класс</h1>
 						<h3></h3>
-						<h2>Подчеркнуто динамичный характер. С легкостью преодолевает любые трудности. Откройте для себя превосходные качества нового седана C-класса. Динамичного, элегантнго и роскошного как никогда <a href="catalog.php?model[]=1&purpose=1" class="detail_link">подробнее</a><!-- <a href="#1" class="detail_link">подробнее</a> --></h2>
+						<h2>Подчеркнуто динамичный характер. С легкостью преодолевает любые трудности. Откройте для себя превосходные качества нового седана C-класса. Динамичного, элегантнго и роскошного как никогда <a href="catalog.php?model[]=1&purpose=1" class="detail_link">подробнее</a></h2>
 					</div>
 				</div>
 			</div>

@@ -2,19 +2,6 @@
 
 include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php';
 
-<<<<<<< HEAD
-$vehicleId = 0;
-if ($_GET['vehicle']) {
-	$vehicleId = $_GET['vehicle'];
-
-	$arDetail = $detail->detailData($vehicleId);
-
-	$photoName = $detail->picture($arDetail);
-
-}
-
-=======
->>>>>>> dev
 ?>
 
 		
@@ -27,11 +14,9 @@ if ($_GET['vehicle']) {
 <section class="content">
 
 		<h2>...Страница в разработке...</h2>
-<<<<<<< HEAD
-	
-=======
+
 			
->>>>>>> dev
+
 </section>
 <?php
 
