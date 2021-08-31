@@ -239,6 +239,9 @@ nav .exit {
 	color: #ff9f5f;
 }
 
+.detail_link:visited {
+	color: #ff7519;
+}
 
 /* END advert / рекламной баннер */
 
